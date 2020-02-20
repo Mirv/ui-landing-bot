@@ -1,0 +1,114 @@
+/* 
+ *
+ * Philosophy 
+ *
+ *  Nesting JSON values
+ *  We curry or wrap each set of JSON layer as we build upwards
+ *    Examples of basic use of iu-landing-bot frameworks JSON formats
+ *      ulib's message function ...
+ *        {["content":  var, "delay": var, "cssClass": var, "human": var]}
+ *      ubib's action function ...
+ *        {["items": [ { "text": "cat", "value": "meow!" }, ...] ]}
+ *
+ *  To make this work, class / object is created with config parameters
+ *    - framework/library we are using
+ *    - script to be ran
+ *
+ *  The wrapping class then provides humane options
+ *    - messages
+ *    - actions (button for ULIB)
+ *
+ */
+
+/* Format Planning - what to wrap around the ULIB library / framework
+ * 
+ * {
+ *                            // First level of currying what type of method/func call from library
+ *  functionName: var,        // method we are calling from library / framework
+ *                            // this is the data hash going to framework that we are currying / wrapping
+ *  {      
+ *    // payload              // this is the data hash going to framework that we are currying / wrapping
+ *  }
+ *
+ */
+ 
+ 
+ 
+ /* Example -- with payload for a simple message
+  * 
+  * {
+  *                            ** Our currying what type of method/func call from library
+  *  fw: ulib,                 ** ... don't forget to initialize this obj before use
+  *  function"type": message,    ** method we are calling from library / framework
+  *
+  *                            ** this is the data hash going to framework that we are currying / wrapping
+  *    {      
+  *      "content":  "Hey! 👋",    ** Second - we include any custom presentation classes for html/css 'cssClass'
+  *      "cssClass": "no-icon",   ** Required:  what are we having said
+  *      "delay": 1000,           ** super basic simulate somone is typing to you idea
+  *    }
+  *
+  */
+  
+ [
+  {
+    "message": {
+      "content": "Hey! 👋",
+      "cssClass": "no-icon",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "content": "I’m the friendly bot and I’m here to make you <strong>feel good</strong>!",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "cssClass": "fill-img no-icon",
+      "content": "heyas pretty person",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "content": "How do you feel?",
+      "delay": 1000
+    }
+  },
+  {
+    "action": {
+      "type": "button",
+      "items": [
+        {
+          "text": "cat",
+          "value": "meow!"
+        },
+        {
+          "text": "awesome",
+          "value": "awesum!"
+        }
+      ]
+    }
+  },
+  {
+    "message": {
+      "human": true,
+      "content": "ok"
+    }
+  },
+  {
+    "message": {
+      "content": "Feeling good now? Well, check out my <a href='https://github.com/ThibaultJanBeyer/ui-landing-bot'>documentation on Github</a> and leave me a Star now 🌟😎🌟",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "human": true,
+      "content": "I love you! 😍",
+      "delay": 2000
+    }
+  }
+]
