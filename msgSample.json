@@ -1,0 +1,47 @@
+[
+  {
+    "message": {
+      "content": "Hey! 👋",
+      "cssClass": "no-icon",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "content": "I’m the friendly bot and I’m here to make you <strong>feel good</strong>!",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "cssClass": "fill-img no-icon",
+      "content": "heyas pretty person",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "content": "How do you feel?",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "human": true,
+      "content": "ok"
+    }
+  },
+  {
+    "message": {
+      "content": "Feeling good now? Well, check out my <a href='https://github.com/ThibaultJanBeyer/ui-landing-bot'>documentation on Github</a> and leave me a Star now 🌟😎🌟",
+      "delay": 1000
+    }
+  },
+  {
+    "message": {
+      "human": true,
+      "content": "I love you! 😍",
+      "delay": 2000
+    }
+  }
+]
